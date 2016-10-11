@@ -1,0 +1,15 @@
+---
+# General
+redis_daemonize: 'yes'
+redis_pidfile: /var/run/redis/redis-server.pid
+redis_port: 6379
+redis_bind: 127.0.0.1
+redis_timeout: 0
+redis_tcpkeepalive: 0
+redis_loglevel: notice
+redis_logfile: /var/log/redis/redis-server.log
+redis_databases: 16
+
+# Limits
+redis_maxmemory: 256mb
+redis_maxmemory_policy: allkeys-lru

@@ -14,7 +14,7 @@
     - { role: ssmtp, tags: [ssmtp, mail] }
     - { role: mailhog, tags: [mailhog, mail] }
     - { role: php, tags: [php] }
-    - { role: memcached, tags: [memcached] }
+    - { role: redis, tags: [redis] }
     - { role: nginx, tags: [nginx] }
     - { role: logrotate, tags: [logrotate] }
     - { role: composer, tags: [composer] }

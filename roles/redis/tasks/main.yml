@@ -1,0 +1,16 @@
+---
+- name: Install redis
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  notify: start redis-server
+  with_items:
+  - php-redis
+  - redis-server
+
+- name: Copy the redis configuration file
+  template:
+    dest: /etc/redis/redis.conf
+    src: redis.conf.j2
+  notify: restart redis-server

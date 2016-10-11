@@ -1,0 +1,11 @@
+---
+- name: start redis-server
+  service:
+    enabled: true
+    name: redis-server
+    state: started
+
+- name: restart redis-server
+  service:
+    name: redis-server
+    state: restarted
