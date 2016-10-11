@@ -1,7 +1,12 @@
 # {{ ansible_managed }}
 
 # Prevent PHP scripts from being executed inside the uploads folder.
-location ~* /app/uploads/.*\.php$ {
+location ~* /content/uploads/.*\.php$ {
+  deny all;
+}
+
+# Prevent public access to config files and xmlrpc.php.
+location ~* (wp-config|environment|xmlrpc)\.php {
   deny all;
 }
 
