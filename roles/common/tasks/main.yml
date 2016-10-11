@@ -61,6 +61,15 @@
   - git-core
   - dbus
 
+- name: Checking extra utilities
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+  - htop
+  - tmux
+  - vim
+
 - name: Validate timezone variable
   stat:
     path: /usr/share/zoneinfo/{{ default_timezone }}
